@@ -1,0 +1,92 @@
+/* Background and layout */
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(circle at center, #0f0c29, #302b63, #24243e);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Heading animations */
+h1 {
+  font-size: 3em;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeSlideIn 1.5s ease forwards;
+}
+
+#typing {
+  font-size: 1.5em;
+  opacity: 0;
+  border-right: 2px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+
+/* Buttons section */
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  opacity: 0;
+  animation: fadeIn 2s ease 3s forwards;
+}
+
+button {
+  background: transparent;
+  border: 1px solid white;
+  padding: 10px 25px;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: white;
+  color: black;
+  box-shadow: 0 0 10px white;
+}
+
+/* Animations */
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Floating gradient circles */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  animation: float 10s infinite alternate ease-in-out;
+}
+
+.circle:nth-child(1) {
+  width: 300px; height: 300px;
+  background: #ff00ff;
+  top: 10%; left: 15%;
+}
+.circle:nth-child(2) {
+  width: 400px; height: 400px;
+  background: #00ffff;
+  bottom: 10%; right: 15%;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-30px); }
+}

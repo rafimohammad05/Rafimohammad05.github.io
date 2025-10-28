@@ -1,6 +1,6 @@
 // Typing effect for subtitle
 const typingText = "Web Developer 💻";
-const typingElement = document.getElementById("typing");
+const typingElement = document.getElementById;
 
 let i = 0;
 function typeEffect() {

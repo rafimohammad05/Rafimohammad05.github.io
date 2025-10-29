@@ -1,4 +1,4 @@
-// Typing animation for "Web Developer 💻"
+// Typing animation
 const typingText = "Web Developer 💻";
 const typingElement = document.querySelector("h2");
 
@@ -12,7 +12,14 @@ function typeEffect() {
 }
 window.onload = typeEffect;
 
-// Smooth scroll to sections
-function scrollToSection(id) {
-  document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+// Show specific section
+function showSection(id) {
+  document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+}
+
+// Go back to home
+function goHome() {
+  document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+  document.getElementById("home").classList.add("active");
 }

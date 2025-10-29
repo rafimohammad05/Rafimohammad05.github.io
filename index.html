@@ -113,5 +113,52 @@
     <button>Projects</button>
     <button>Contact</button>
   </div>
+  <!-- About Section -->
+<section id="about">
+  <h3>About Me</h3>
+  <p>
+    I’m Rafi Mohammad, a passionate web developer who loves building creative,
+    user-friendly websites. I enjoy working with HTML, CSS, JavaScript, and
+    exploring new web technologies.
+  </p>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+  <h3>My Projects</h3>
+  <p>Here are some of my recent works:</p>
+  <ul>
+    <li>💻 Portfolio Website (the one you’re viewing now)</li>
+    <li>📱 Responsive Landing Page using HTML, CSS, JS</li>
+    <li>🗺 Map-based Web App (GIS project)</li>
+  </ul>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <h3>Contact Me</h3>
+  <p>Email: <a href="mailto:rafimohammad05@gmail.com">rafimohammad05@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://linkedin.com" target="_blank">linkedin.com/in/rafi</a></p>
+</section>
+
+<// Typing animation
+const typingText = "Web Developer 💻";
+const typingElement = document.querySelector("h2");
+
+let i = 0;
+function typeEffect() {
+  if (i < typingText.length) {
+    typingElement.textContent += typingText.charAt(i);
+    i++;
+    setTimeout(typeEffect, 100);
+  }
+}
+window.onload = typeEffect;
+
+// Smooth scroll when button clicked
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+}!-- Add your JS link here -->
+<script src="script.js"></script>
 </body>
 </html>
